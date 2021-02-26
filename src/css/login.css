@@ -1,0 +1,235 @@
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #9e9e9e;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.label {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #616161;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+input,
+label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* Interation */
+
+input:valid,
+input:focus {
+    border-bottom: 2px solid #000000;
+}
+
+input:valid+label,
+input:focus+label {
+    color: #000;
+    font-size: .8rem;
+    top: -30px;
+    pointer-events: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #616161;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    margin: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+    background-color: #FFF;
+}
+
+.menu_card {
+    border: 1px solid #616161;
+    border-radius: 20px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    min-height: 460px;
+}
+
+.icon_user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.icon_user i {
+    font-size: 2em;
+    border: 1px solid #616161;
+    padding: 20px;
+    border-radius: 50%;
+    color: #616161;
+}
+
+
+/* .icon_user:before {
+    content: '';
+    width: calc(100% - 70%);
+    height: 1px;
+    background: #000;
+}
+
+.icon_user:after {
+    content: '';
+    width: calc(100% - 70%);
+    height: 1px;
+    background: #000;
+} */
+
+.login {
+    text-align: center;
+}
+
+button.btn_login {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    margin-top: 20px;
+    -webkit-transition: ease 1.8s;
+    -o-transition: ease 1.8s;
+    transition: ease 0.2s;
+    box-shadow: 0 0 4px #c5c5c5;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn_login:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.btn_login:after,
+.btn_login:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 20px;
+}
+
+.btn_login:after {
+    border-left: 2px solid #616161;
+    border-right: 2px solid #616161;
+    transform: scaleY(0);
+}
+
+.btn_login:before {
+    border-top: 2px solid #616161;
+    border-bottom: 2px solid #616161;
+    transform: scaleX(0);
+}
+
+.btn_login:hover:after {
+    transform: scaleY(1)
+}
+
+.btn_login:hover:before {
+    transform: scaleX(1)
+}
+
+.esqueci_senha {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn_eq_senha {
+    font-weight: 600;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    color: #9e9e9e;
+}
+
+.btn_eq_senha:hover {
+    color: #616161;
+}
+
+.btn_eq_senha i {
+    vertical-align: middle;
+}
+
+.menu_card_recupera {
+    opacity: 0;
+    position: absolute;
+    right: -100%;
+    transition: all 252ms ease;
+    padding: 26px;
+}
+
+.menu_login {
+    transition: all 250ms ease;
+    position: absolute;
+    width: 100%;
+    padding: 26px;
+    left: 0;
+}
+
+.menu_login.oculta {
+    transition: all 250ms ease;
+    position: absolute;
+    width: 100%;
+    padding: 26px;
+    left: -100%;
+}
+
+.menu_card_recupera.ativo {
+    position: absolute;
+    width: 100%;
+    padding: 26px;
+    right: 0;
+    opacity: 1;
+}
+
+a.login_volta {
+    font-size: 32px;
+    position: relative;
+    margin: -3px 0 23px -18px;
+    color: #ccc;
+    cursor: pointer;
+}
